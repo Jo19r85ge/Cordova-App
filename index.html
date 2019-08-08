@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+    <!--
+        Personalice la directiva de seguridad de contenido en la etiqueta meta como sea necesario. Agregue "unsafe-inline" a default-src para permitir JavaScript insertado.
+        Para obtener más detalles, consulte http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>AppPrueba</title>
+    </head>
+    <body>
+        <div class="div" style="text-align: center;">
+            <div>
+                <h1>Basic Calculator</h1>
+            </div>
+            <table>
+                <tr>
+                    <td>
+                        <input type="text" class="input" id="InputA" onfocus="SelectInput('InputA')">
+                        <input type="text" class="input" id="InputB" onfocus="SelectInput('InputB')">
+                        <input type="text" class="input" id="InputResult" onfocus="SelectInput('InputResult')" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" class="btn" value="7" onclick="AssignNumber('7')">
+                        <input type="button" class="btn" value="8" onclick="AssignNumber('8')">
+                        <input type="button" class="btn" value="9" onclick="AssignNumber('9')">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" class="btn" value="4" onclick="AssignNumber('4')">
+                        <input type="button" class="btn" value="5" onclick="AssignNumber('5')">
+                        <input type="button" class="btn" value="6" onclick="AssignNumber('6')">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" class="btn" value="1" onclick="AssignNumber('1')">
+                        <input type="button" class="btn" value="2" onclick="AssignNumber('2')">
+                        <input type="button" class="btn" value="3" onclick="AssignNumber('3')">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" class="btn" value="+" onclick="Add()">
+                        <input type="button" class="btn" value="0" onclick="AssignNumber('0')">
+                        <input type="button" class="btn" value="-" onclick="Sub()">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" class="btn" value="*" onclick="Mult()">
+                        <input type="button" class="btn" value="Clean" onclick="Clean()">
+                        <input type="button" class="btn" value="/" onclick="Div()">
+                    </td>
+                </tr>
+            </table>
+            <script type="text/javascript" src="cordova.js"></script>
+            <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+            <script type="text/javascript" src="scripts/index.js"></script>
+    </body>
+</html>
